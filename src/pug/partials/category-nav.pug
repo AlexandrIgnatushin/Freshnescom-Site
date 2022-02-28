@@ -1,0 +1,33 @@
+-
+    let categoryArr = [
+        {title: 'Category menu',
+         names: ['Bakery', 'Fruit and vegetables', 'Meat and fish', 'Drinks', 'Kitchen'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox', 'http://google.com/'],
+         btnName: 'More categories',
+         btnRef: 'http://google.com/'
+        },
+        {title: 'Best selling products',
+         names: ['Kitchen', 'Meat and fish', 'Special nutrition', 'Pharmacy', 'Baby'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox', 'http://google.com/'],
+         btnName: 'More Products',
+         btnRef: 'http://google.com/'
+        },
+        {title: 'Best from Farmers',
+         names: ['Carrots', 'Tomatoes', 'Potatoes', 'Chicken', 'Pork'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox', 'http://google.com/'],
+         btnName: 'More Products',
+         btnRef: 'http://google.com/'
+        }
+    ]
+
+.category-nav__wrapper 
+    each val in categoryArr
+        .category-nav__item
+            h4.category-nav__item-title= val.title
+            ul.category-nav__list
+                each arr, index in val.names
+                    li
+                        a.category-nav__list-item(href= val.refs[index])= val.names[index]
+            a.category-nav__btn(href= val.btnRef)= val.btnName
+                
+            

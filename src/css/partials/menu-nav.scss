@@ -1,0 +1,30 @@
+/*menu-nav*/
+
+@import "abstracts/variables.scss";
+
+.menu-nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 43px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.menu-nav__item {
+    text-decoration: none;
+    color: $colorBlack;
+    font-size: $textSize15;
+    font-weight: 500;
+
+    &::after {
+        content: '';
+        border: solid $colorGreen;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 2px;
+        transform: rotate(45deg);
+        margin-left: 6px;
+        margin-bottom: 3px;
+    }
+}

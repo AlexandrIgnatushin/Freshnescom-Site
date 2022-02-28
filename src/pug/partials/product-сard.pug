@@ -1,0 +1,98 @@
+-
+    let сardArr = [
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '1.48 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: false,
+            alt: 'pic',
+        },
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '0.28 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: true,
+            alt: 'pic',
+        },
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '1.12 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: true,
+            alt: 'pic',
+        },
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '1.48 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: false,
+            alt: 'pic',
+        },
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '0.28 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: true,
+            alt: 'pic',
+        },
+        {
+            title: 'Product Title',
+            description: 'Space for a small product description ',
+            price: '1.12 USD',
+            oldPrice: '48.56',
+            discount: '-36 %',
+            img: './img/Rec.png',
+            cardRef: 'http://google.com/',
+            buyRef: 'http://youtube.com/',
+            condition: true,
+            alt: 'pic',
+        },
+    ]
+
+.product-card-wrapper 
+    each val in сardArr
+        .product-card 
+            .product-card__header
+                a(href=val.cardRef class='product-card__img-block')
+                    img(src=val.img alt=val.alt class='product-card__img')
+                    if val.condition
+                        span.product-card__discount= val.discount
+                    else
+                        span.product-card__discount
+            .product-card__main
+                a(href=val.cardRef class='product-card__title')= val.title
+                p.product-card__sub-title= val.description 
+                .product-card__buy 
+                    .product-card__block-price 
+                        span.product-card__price= val.price
+                        if val.condition
+                            span.product-card__old-price= val.oldPrice
+                        else
+                            span.product-card__old-price
+                    a(href=val.buyRef class='product-card__buy-now') Buy Now
+    

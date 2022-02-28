@@ -1,0 +1,153 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+/*Header-info*/
+
+.header-info {
+    @include flexAlign;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.header-info__contact {
+    a {
+        text-decoration: none;
+        color: $colorBlack;
+        font-size: $textSize12;
+
+        &:first-child {
+            color: $colorGreen;
+        }
+
+        &:nth-child(2) {
+            margin: 0 33px;
+        }
+    }
+}
+
+.header-info__menu-nav {
+    ul {
+        @include flexAlign;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+    }
+}
+
+.header-info__menu-item {
+
+    &:nth-child(2) {
+        margin: 0 38px;
+    }
+
+    a {
+        color: $colorGreen;
+        text-decoration: none;
+        font-size: $textSize12;
+    }
+}
+
+.header-info__hr {
+    margin: 0;
+    opacity: 0.05;
+    border: 1px solid $colorBlack;
+}
+
+/*Header-main*/
+
+.header-main {
+    @include flexAlign;
+    padding: 40px 0;
+}
+
+.header-main__logo-wrapper {
+    flex-grow: 1.5;
+}
+
+.header-main__search-block {
+    flex-grow: 2;
+}
+
+.header-main__search-form {
+    @include flexAlign;
+    gap: 24px;
+    max-width: 500px;
+    background-color: #F9F9F9;
+    border: 1px solid $colorGray82;
+    border-radius: 12px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+
+.header-main__category-button {
+    @include resetBtn;
+    font-size: $textSize15;
+    font-weight: 700;
+
+    &::after {
+        content: '';
+        border: solid $colorGreen;
+        border-width: 0 2.5px 2.5px 0;
+        display: inline-block;
+        padding: 2px;
+        transform: rotate(45deg);
+        margin-left: 13px;
+        margin-bottom: 3px;
+    }
+}
+
+.header-main__hr {
+    border: 1px solid $colorGray82;
+    transform: rotate(90deg);
+    width: 20px;
+    margin: 0;
+}
+
+.header-main__input {
+    flex-grow: 2;
+    font-family: $fontOpenSans;
+    font-size: $textSize14;
+    @include resetBtn;
+    cursor: text;
+
+    &::placeholder {
+        color: #A9A9A9;
+        opacity: 0.6;
+    }
+}
+
+.header-main__search-button {
+    display: flex;
+    @include resetBtn;
+}
+
+.header-main__user-options {
+    flex-grow: 1;
+    @include flexAlign;
+    justify-content: end;
+    gap: 38px;
+}
+
+.header-main__user-profile {
+    @include resetBtn;
+}
+
+.header-main__user-shop-cart {
+    position: relative;
+    @include resetBtn;
+
+    &::after {
+        content: '4';
+        position: absolute;
+        left: -3px;
+        bottom: -3px;
+        @include flex;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $colorOrange;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        font-size: $textSize12;
+        color: $colorWhite;
+    }
+}

@@ -1,0 +1,52 @@
+-
+    let footerListsArr = [
+        {title: 'Get in touch',
+         names: ['About Us', 'Careers', 'Press Releases', 'Blog'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox'],
+        },
+        {title: 'Connections',
+         names: ['Facebook', 'Twitter', 'Instagram', 'Youtube', 'LinkedIn'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox', 'https://ru.linkedin.com/'],
+        },
+        {title: 'Earnings',
+         names: ['Become an Affiliate', 'Advertise your product', 'Sell on Market'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood'],
+        },
+        {title: 'Account',
+         names: ['Your account', 'Returns Centre', '100 % purchase protection', 'Chat with us', 'Help'],
+         refs: ['https://www.youtube.com/watch?v=2c0XzZAVcF8', 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', 'https://music.yandex.ru/radio/mood', 'https://mail.yandex.ru/#inbox', 'https://ru.linkedin.com/'],
+        },
+    ]
+
+.footer__lists-wrapper 
+    each val in footerListsArr
+        .footer__list-block
+            h4.footer__list-title= val.title
+            ul.footer__list
+                each arr, index in val.names
+                    li
+                        a.footer__list-item(href= val.refs[index])= val.names[index]
+.footer__tags-wrapper 
+    h4.footer__tags-title Product tags
+    .footer__tags
+        a.footer__tags-item(href="#") Beans
+        a.footer__tags-item(href="#") Carrots
+        a.footer__tags-item(href="#") Apples
+        a.footer__tags-item(href="#") Garlic
+        a.footer__tags-item(href="#") Mushrooms
+        a.footer__tags-item(href="#") Tomatoes
+        a.footer__tags-item(href="#") Chilli peppers
+        a.footer__tags-item(href="#") Broccoli
+        a.footer__tags-item(href="#") Watermelons
+        a.footer__tags-item(href="#") Oranges
+        a.footer__tags-item(href="#") Bananas
+        a.footer__tags-item(href="#") Grapes
+        a.footer__tags-item(href="#") Cherries
+        a.footer__tags-item(href="#") Meat
+        a.footer__tags-item(href="#") Seo tag
+        a.footer__tags-item(href="#") Fish
+        a.footer__tags-item(href="#") Seo tag
+        a.footer__tags-item(href="#") Fresh food
+        a.footer__tags-item(href="#") Lemons
+p.footer__copyrights 
+    span Copyright © 2020 

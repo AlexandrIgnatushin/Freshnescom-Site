@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/fonts.css")
+        link(rel="stylesheet", href="./css/style.min.css")
+        link(rel="stylesheet", href="./css/normalie.css")
+        title Document
+    body
+        .wrapper
+            header.header 
+                .container 
+                    include ../partials/header
+            section.navigation
+                .container 
+                    include ../partials/menu-nav
+            main.main 
+                .container 
+                    .main__content-wrapper
+                        .main__aside 
+                            include ../partials/category-nav
+                        .main__content
+                            include ../partials/banners
+                            include ../partials/product-сard
+            section.reviews-section 
+                .container 
+                    .title-block 
+                        h4.title-block__title Our customers says 
+                        a(href="#" class='title-block__button') Button
+                include ../partials/reviews
+            section.headline 
+                .container 
+                    include ../partials/headline
+            section.blog 
+                .container 
+                    include ../partials/blog
+            footer.footer
+                .container 
+                    include ../partials/footer
+        script(src='./js/main.min.js')

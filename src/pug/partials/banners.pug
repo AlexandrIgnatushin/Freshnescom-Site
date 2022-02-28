@@ -1,0 +1,31 @@
+-
+    let bannersArr = [
+        {
+            subTitle: 'Banner subfocus 1',
+            title: 'Space for heading 1',
+            btnName: 'Read recepies',
+            img: './img/banner.png',
+            btnRef: 'http://google.com/',
+            alt: 'pic'
+        },
+        {
+            subTitle: 'Banner subfocus 2',
+            title: 'Space for heading 2',
+            btnName: 'Read recepies',
+            img: './img/banner.png',
+            btnRef: 'http://youtube.com/',
+            alt: 'pic'
+        },
+    ]
+
+.banner-wrapper
+    each val in bannersArr
+        .banner
+            .banner__img-block
+                img(src=val.img, alt=val.alt, class='banner__img')
+            .banner__content
+                p.banner__sub-title= val.subTitle
+                h2.banner__title= val.title 
+                .btn-block 
+                    a(href=val.btnRef class='banner__btn')= val.btnName
+

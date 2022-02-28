@@ -1,0 +1,66 @@
+-
+    let qouteArr = [
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava1.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava2.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava3.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava1.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava2.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava3.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava2.png',
+            alt: 'pic'
+        },
+        {
+            qoute: '“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “',
+            name: 'Alex Smirnov',
+            img: './img/ava3.png',
+            alt: 'pic'
+        },
+    ]
+
+.reviews.swiper-container
+    .reviews__slider.swiper-wrapper 
+        each val in qouteArr
+            .reviews__item.swiper-slide
+                p.reviews__qoute= val.qoute
+                p.reviews__name= val.name
+                .reviews__img-block 
+                    img(src=val.img alt=val.pic)
+    button.reviews__btn-prev
+        .reviews__arrow-left
+    button.reviews__btn-next
+        .reviews__arrow-right
+    .reviews__opacity-block-left
+    .reviews__opacity-block-right
